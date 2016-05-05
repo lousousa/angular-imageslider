@@ -11,7 +11,10 @@
   	"dist/angular-imageslider.min.js"
   ],
   "ignore": [
-  	"*.md"
+  	"*.md",
+  	"/app/",
+  	"gulpfile.*",
+  	"package.json"
   ],
   "license": "MIT"
 }
