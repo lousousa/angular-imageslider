@@ -1,0 +1,31 @@
+{
+  "name": "angular-imageslider",
+  "version": "0.1.0",
+  "description": "A slim image slider that can be easily integrated with Angular applications.",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lousousa/angular-imageslider.git"
+  },
+  "author": "Luis Felipe Sousa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lousousa/angular-imageslider/issues"
+  },
+  "homepage": "https://github.com/lousousa/angular-imageslider#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "coffee-script": "^1.10.0",
+    "gulp": "^3.9.0",
+    "gulp-coffee": "^2.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-if": "^2.0.0",
+    "gulp-inject": "^3.0.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.1",
+    "main-bower-files": "^2.11.1",
+    "yargs": "^3.32.0"
+  }
+}

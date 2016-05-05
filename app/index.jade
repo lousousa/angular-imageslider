@@ -1,0 +1,39 @@
+doctype html
+html(lang="pt-br" ng-app="demo")
+	head
+		title Angular Imageslider Demo
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0, user-scalable=no")
+		//bower:css
+		//endinject
+		//app:css
+		//endinject
+		//bower:js
+		//endinject
+		//app:js
+		//endinject
+		script.
+			angular.module("demo", ["ngImageslider"]);
+			angular.module("demo").controller("demoCtrl", function() {
+				vm = this;
+
+				activate = function() {
+					vm.pictures = [
+						{url: "http://placehold.it/1920x1080"},
+						{url: "http://placehold.it/1080x1920"}
+					];
+				};
+
+				activate();
+			});
+		style.
+			a.a, img.img {
+				display: block;
+				width: 100%;
+			}
+
+	body(ng-controller="demoCtrl as vm")
+		div(imageslider="vm.pictures")
+			div(ng-repeat="picture in vm.pictures")
+				a.a(href="javascript:;" imageslider-trigger="{{$index}}")
+					img.img(ng-src="{{picture.url}}")

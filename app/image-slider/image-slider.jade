@@ -1,0 +1,22 @@
+div.imgsld(ng-keydown="vm.keyDown($event)")
+	div.imgsld-modal
+		div.imgsld-inner-modal
+			div.imgsld-container-imagebox
+				a.imgsld-button-close(href="javascript:;" ng-click="vm.close()")
+					span.icon-cancel-outline
+				picture.imgsld-imagebox
+					div.imgsld-cssload-container(ng-hide="vm.slider.pictureList[vm.slider.current]._data.loaded")
+							div.imgsld-cssload-double-torus
+					img.imgsld-img(ng-show="vm.slider.pictureList[vm.slider.current]._data.loaded" ng-src="{{vm.slider.pictureList[vm.slider.current].url}}")
+			div.imgsld-container-wrapper
+				div.imgsld-wrapper
+					div.imgsld-inner-wrapper
+						a.imgsld-button(href="javascript:;" ng-click="vm.slider.prev()")
+							span.icon-left-open-outline
+						a.imgsld-button(href="{{vm.slider.pictureList[vm.slider.current].url}}" download)
+							span.icon-download-outline
+						span.imgsld-label {{vm.slider.current + 1}} / {{vm.slider.pictureList.length}}
+						a.imgsld-button(href="javascript:;" ng-click="vm.slider.next()")
+							span.icon-right-open-outline
+	div.imgsld-body
+		ng-transclude
