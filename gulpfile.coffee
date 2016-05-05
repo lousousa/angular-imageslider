@@ -37,7 +37,7 @@ gulp.task "coffee", ->
 	gulp.src glob.coffee
 		.pipe plumber()
 		.pipe coffee()
-		.pipe concat "app#{altExt}.js"
+		.pipe concat "angular-imageslider#{altExt}.js"
 		.pipe gulpif args.prod, uglify {mangle: false}
 		.pipe gulp.dest "./dist/"
 		.pipe reload {stream: true}
@@ -47,7 +47,7 @@ gulp.task "sass", ->
 	gulp.src glob.sass
 		.pipe plumber()
 		.pipe sass gulpif args.prod, {outputStyle: "compressed"}
-		.pipe concat "app#{altExt}.css"
+		.pipe concat "angular-imageslider#{altExt}.css"
 		.pipe gulp.dest "./dist/assets/"
 		.pipe reload {stream: true}
 	return
@@ -60,7 +60,7 @@ gulp.task "jade", ->
 
 gulp.task "inject", ["jade"], ->
 	gulp.src "./dist/index.html"
-		.pipe inject gulp.src(["./dist/assets/app#{altExt}.css", "./dist/app#{altExt}.js"]), {name: "app", addRootSlash: false, relative: true}
+		.pipe inject gulp.src(["./dist/assets/angular-imageslider#{altExt}.css", "./dist/angular-imageslider#{altExt}.js"]), {name: "app", addRootSlash: false, relative: true}
 		.pipe inject gulp.src(bowerFiles()), {name: "bower", addRootSlash: false, relative: true}
 		.pipe gulp.dest "./dist"
 		.pipe reload {stream: true}

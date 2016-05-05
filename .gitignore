@@ -1,2 +1,4 @@
 /node_modules/
-/dist/
+/dist/vendor/
+/dist/index.html
+/dist/assets/demo-font.html
