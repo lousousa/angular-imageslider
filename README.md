@@ -2,7 +2,7 @@
 
 ## Description
 
-A slim image slider that can be easily integrated with Angular applications.
+A slim image slider that can be easily integrated with Angular applications. Check [this demo](http://lousousa.github.io/angular-imageslider/demo).
 
 ## Features
 
