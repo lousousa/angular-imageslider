@@ -10,7 +10,7 @@
 		bottom: -20%;
 		left: 0;
 		text-align: center;
-		z-index: 997;
+		z-index: 999;
 		opacity: 0;
 		visibility: hidden;
 		transition: .2s;
@@ -45,6 +45,7 @@
 		right: 0;
 		top: 0;
 		color: #ddd;
+		z-index: 999;
 		display: inline-block;
 		padding: 10px;
 		text-shadow: 0 2px 2px #000;
