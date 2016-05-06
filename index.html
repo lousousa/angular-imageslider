@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Angular-imageslider by lousousa</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Angular-imageslider</h1>
+        <p>A slim image slider that can be easily integrated with Angular applications.</p>
+
+        <p class="view"><a href="https://github.com/lousousa/angular-imageslider">View the Project on GitHub <small>lousousa/angular-imageslider</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/lousousa/angular-imageslider/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/lousousa/angular-imageslider/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/lousousa/angular-imageslider">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="angular-imageslider" class="anchor" href="#angular-imageslider" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Angular Imageslider</h1>
+
+<h2>
+<a id="description" class="anchor" href="#description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Description</h2>
+
+<p>A slim image slider that can be easily integrated with Angular applications.</p>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>AngularJS compability;</li>
+<li>Navigation controllers and keyboard mapping;</li>
+<li>Download button for each image.</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<pre><code>bower install angular-imageslider
+</code></pre>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<pre><code>&lt;script&gt;
+    angular.module("demo", ["ngImageslider"]);
+
+    angular.module("demo")
+        .controller("demoCtrl", function() {
+            vm = this;
+            vm.pictureList = [
+                {
+                    url: "path/to/pictures/01.jpg",
+                    thumb: "path/to/pictures/thumbs/01.jpg"
+                },
+                {
+                    url: "path/to/pictures/02.jpg",
+                    thumb: "path/to/pictures/thumbs/02.jpg"
+                },
+                {
+                    url: "path/to/pictures/03.jpg",
+                    thumb: "path/to/pictures/thumbs/03.jpg"
+                }
+            ];
+        });
+&lt;/script&gt;
+
+&lt;div ng-controller="demoCtrl as vm"&gt;
+    &lt;div imageslider="vm.pictureList"&gt;
+        &lt;div ng-repeat="picture in vm.pictureList"&gt;
+            &lt;a href="javascript:;" imageslider-trigger="{{$index}}"&gt;
+                &lt;img ng-src="{{picture.thumb}}" /&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3>
+<a id="imageslider" class="anchor" href="#imageslider" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>imageslider</h3>
+
+<p>Directive parent that expects the the list of images, and each image object <strong>must</strong> include the property <em>url</em>. </p>
+
+<h3>
+<a id="imageslider-trigger" class="anchor" href="#imageslider-trigger" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>imageslider-trigger</h3>
+
+<p>Directive child that defines a trigger to open the slider on the image which the index is related to.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/lousousa">lousousa</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
