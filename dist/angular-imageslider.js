@@ -88,8 +88,8 @@
             angular.element(trigger).attr("ng-click", "vm.selectImage(" + imgIndex + ")");
             return $compile(angular.element(trigger))(scope);
           });
-          $imagebox = angular.element(document.querySelector(".imgsld .imgsld-imagebox"));
-          $wrapper = angular.element(document.querySelector(".imgsld .imgsld-wrapper"));
+          $imagebox = angular.element(el[0].querySelector(".imgsld-imagebox"));
+          $wrapper = angular.element(el[0].querySelector(".imgsld-wrapper"));
           _setHeight = function() {
             $imagebox.css({
               height: ($window.innerHeight * .92) + "px"

@@ -60,9 +60,9 @@ imageslider = ($timeout, $compile, $window, $interval, $templateCache)->
 					angular.element(trigger).attr("ng-click", "vm.selectImage(#{imgIndex})")
 					$compile(angular.element(trigger))(scope)
 				
-				$imagebox = angular.element document.querySelector ".imgsld .imgsld-imagebox"
-				$wrapper = angular.element document.querySelector ".imgsld .imgsld-wrapper"
-				
+				$imagebox = angular.element el[0].querySelector ".imgsld-imagebox"
+				$wrapper = angular.element el[0].querySelector ".imgsld-wrapper"
+
 				_setHeight = ->
 					$imagebox.css {height: ($window.innerHeight * .92) + "px"}
 					$wrapper.css {height: ($window.innerHeight * .08) + "px"}

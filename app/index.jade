@@ -20,21 +20,30 @@ html(lang="pt-br" ng-app="demo")
 
 				activate = function() {
 					vm.pictures = [
-						{url: "http://placehold.it/1920x1080"},
-						{url: "http://placehold.it/1080x1920"}
+						{
+							url: "http://placehold.it/1920x1080",
+							thumb: "http://placehold.it/300x300"
+						},
+						{
+							url: "http://placehold.it/1080x1920",
+							thumb: "http://placehold.it/300x300"
+						}
 					];
 				};
 
 				activate();
 			});
 		style.
-			a.a, img.img {
+			.a {
 				display: block;
 				width: 100%;
+			}
+			.div {
+				display: inline-block;
 			}
 
 	body(ng-controller="demoCtrl as vm")
 		div(imageslider="vm.pictures")
-			div(ng-repeat="picture in vm.pictures")
+			div.div(ng-repeat="picture in vm.pictures")
 				a.a(href="javascript:;" imageslider-trigger="{{$index}}")
-					img.img(ng-src="{{picture.url}}")
+					img.img(ng-src="{{picture.thumb}}")
