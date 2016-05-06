@@ -12,13 +12,13 @@ A slim image slider that can be easily integrated with Angular applications.
 
 ## Installation
 
-´´´
+```
 bower install angular-imageslider
-´´´
+```
 
 ## Usage
 
-´´´
+```
 <script>
 	angular.module("demo", ["ngImageslider"]);
 
@@ -51,7 +51,7 @@ bower install angular-imageslider
 		</div>
 	</div>
 </div>
-´´´
+```
 
 ### imageslider
 
