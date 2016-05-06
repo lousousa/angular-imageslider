@@ -1,10 +1,10 @@
-imageslider = ($timeout, $compile, $window, $interval)->
+imageslider = ($timeout, $compile, $window, $interval, $location)->
 	{
 		restrict: "A"
 		scope: {
 			imageslider: "="
 		}
-		templateUrl: "image-slider/image-slider.html"
+		templateUrl: "#{$location.$$absUrl}image-slider/image-slider.html"
 		transclude: true
 		controller: "imagesliderCtrl as vm"	
 		link: (scope, el, attr, ctrl)->

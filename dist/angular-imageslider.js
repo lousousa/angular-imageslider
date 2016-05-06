@@ -42,13 +42,13 @@
 (function() {
   var imageslider;
 
-  imageslider = function($timeout, $compile, $window, $interval) {
+  imageslider = function($timeout, $compile, $window, $interval, $location) {
     return {
       restrict: "A",
       scope: {
         imageslider: "="
       },
-      templateUrl: "image-slider/image-slider.html",
+      templateUrl: $location.$$absUrl + "image-slider/image-slider.html",
       transclude: true,
       controller: "imagesliderCtrl as vm",
       link: function(scope, el, attr, ctrl) {
