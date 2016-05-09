@@ -1,26 +1,55 @@
-<!DOCTYPE html><html lang="pt-br" ng-app="demo"><head><title>Angular Imageslider Demo</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><!--bower:css--><!--endinject--><!--app:css--><link rel="stylesheet" href="assets/angular-imageslider.min.css"><!--endinject--><!--bower:js--><!--endinject--><script src="vendor/angular/angular.min.js"></script><!--app:js--><script src="angular-imageslider.min.js"></script><!--endinject--><script>angular.module("demo", ["ngImageslider"]);
-angular.module("demo").controller("demoCtrl", function() {
-	vm = this;
-
-	activate = function() {
-		vm.pictures = [
-			{
-				url: "http://placehold.it/1920x1080",
-				thumb: "http://placehold.it/300x300"
-			},
-			{
-				url: "http://placehold.it/1080x1920",
-				thumb: "http://placehold.it/300x300"
-			}
-		];
-	};
-
-	activate();
-});</script><style>.a {
-	display: block;
-	width: 100%;
-}
-.div {
-	display: inline-block;
-}
-</style></head><body ng-controller="demoCtrl as vm"><div imageslider="vm.pictures"><div ng-repeat="picture in vm.pictures" class="div"><a href="javascript:;" imageslider-trigger="{{$index}}" class="a"><img ng-src="{{picture.thumb}}" class="img"></a></div></div></body></html>
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="demo">
+  <head>
+    <title>Angular Imageslider Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!--bower:css-->
+    <!--endinject-->
+    <!--app:css-->
+    <link rel="stylesheet" href="assets/angular-imageslider.css">
+    <!--endinject-->
+    <!--bower:js-->
+    <!--endinject-->
+    <script src="vendor/angular/angular.min.js"></script>
+    <!--app:js-->
+    <script src="angular-imageslider.js"></script>
+    <!--endinject-->
+    <script>
+      angular.module("demo", ["ngImageslider"]);
+      angular.module("demo").controller("demoCtrl", function() {
+      	vm = this;
+      
+      	activate = function() {
+      		vm.pictures = [
+      			{
+      				url: "http://placehold.it/1920x1080",
+      				thumb: "http://placehold.it/300x300"
+      			},
+      			{
+      				url: "http://placehold.it/1080x1920",
+      				thumb: "http://placehold.it/300x300"
+      			}
+      		];
+      	};
+      
+      	activate();
+      });
+    </script>
+    <style>
+      .a {
+      	display: block;
+      	width: 100%;
+      }
+      .div {
+      	display: inline-block;
+      }
+      
+    </style>
+  </head>
+  <body ng-controller="demoCtrl as vm">
+    <div imageslider="vm.pictures">
+      <div ng-repeat="picture in vm.pictures" class="div"><a href="javascript:;" imageslider-trigger="{{$index}}" class="a"><img ng-src="{{picture.thumb}}" class="img"></a></div>
+    </div>
+  </body>
+</html>
